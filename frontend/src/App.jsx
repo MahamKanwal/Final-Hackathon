@@ -1,13 +1,29 @@
-import React from "react";
-import TaskBoard from "./Components/TaskBoard";
+import Dashboard from './Components/Dashboard';
+import Login from './Components/Login';
+import Signup from './Components/Signup';
 
-const App = () => {
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes
+} from "react-router-dom";
+function App() {
+
+
   return (
-    <div className="min-h-screen bg-gray-200">
-      <h1 className="text-4xl font-bold text-center py-6">Task Board</h1>
-      <TaskBoard />
-    </div>
-  );
-};
+    <>
 
-export default App;
+      <Router>
+      <Routes>
+      <Route path="/" element={<Signup />} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/dashboard" element={<Dashboard/>} />
+      </Routes>
+    </Router> 
+
+    </>
+  )
+}
+
+export default App

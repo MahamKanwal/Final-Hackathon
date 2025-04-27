@@ -61,7 +61,7 @@ import connectToDb from "./db/db.js";
 app.use(
     cors({
         origin: [
-            'http://localhost:5173',
+            'http://localhost:5175',
             'http://localhost:5174',
             'https://batch11-mern-stack-1.onrender.com',
             'https://batch11-mern-stack.vercel.app/',
@@ -88,7 +88,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/tasks", taskRoutes);
 
-// Serve static frontend files (uncomment if needed)
+
 app.use(express.static(path.join(__dirname, "dist")));
 
 // Start server
